@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import i18n from './i18n';
 import VistaReact from './vistaReact.js';
-function App() {
+import { withNamespaces } from 'react-i18next';
+
+function App({t}) {
   return (
     <div className="App">
-     <VistaReact></VistaReact>
+     <VistaReact language={t}></VistaReact>
     </div>
   );
 }
 
-export default App;
+export default withNamespaces()(App);
